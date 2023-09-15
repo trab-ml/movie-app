@@ -1,4 +1,5 @@
-[TAKE A LOOK](https://trab-ml.github.io/movie-app/)   
+[TAKE A LOOK](https://trab-ml.github.io/movie-app/)
+https://trab-ml.github.io/movie-app/
 
 
 # A React App which simulates a movie app
