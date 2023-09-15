@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MovieComponentProps, formatNumber } from "../utils";
 import {
   Heart,

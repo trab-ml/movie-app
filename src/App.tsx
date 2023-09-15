@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchMovies } from "./data/fetchMovies";
 import { ListMovie } from "./components/ListMovie";
 import { CategoryFilter } from "./components/CategoryFilter";
@@ -68,7 +68,7 @@ function App() {
   };
 
   // Allow user choose the number of items by pages
-  const handleItemsByPage = (e) => {
+  const handleItemsByPage = (e: React.ChangeEvent<HTMLInputElement>) => {
     const userInput = e.target.value;
     const constraint = /^\d*$/.test(userInput);
     constraint && setItemsByPage(parseInt(userInput));
