@@ -67,6 +67,7 @@ function App() {
     }
   };
 
+  // Allow user choose the number of items by pages
   const handleItemsByPage = (e) => {
     const userInput = e.target.value;
     const constraint = /^\d*$/.test(userInput);
@@ -83,6 +84,7 @@ function App() {
         />
       </header>
 
+      {/* List fetched movies */}
       <ListMovie
         movies={moviesData}
         handleLike={handleLike}
@@ -90,6 +92,7 @@ function App() {
         categories={options}
       />
 
+      {/* Pagination Nav section*/}
       <nav className="d-flex align-items-center my-3">
         <button onClick={prevPage} disabled={page === 1} className="btn">
           Prev Page

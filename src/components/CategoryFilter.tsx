@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MultiSelect } from "react-multi-select-component";
 import { CategoryFilterProps, OptionProps, retrieveCategories } from "../utils";
 
+// A Filter-by-category component, charged to allow user filter by categories
 export function CategoryFilter({ movies, onOptionsChange }: CategoryFilterProps) {
   const categories = retrieveCategories(movies);
   const [selected, setSelected] = useState([] as OptionProps[]);

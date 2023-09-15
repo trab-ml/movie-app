@@ -8,6 +8,7 @@ import {
   Trash,
 } from "react-bootstrap-icons";
 
+// Movie Displayer Component, charged to display a movie datas
 export function Movie({ movie, handleLike, handleDelete }: MovieComponentProps) {
   const [isLiked, setIsLiked] = useState(false);
 
