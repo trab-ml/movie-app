@@ -1,3 +1,8 @@
+export interface OptionProps {
+  label: string;
+  value: string;
+}
+
 export interface MovieProps {
   id: number;
   title: string;
@@ -12,11 +17,22 @@ export type handleDeleteProps = (id: number, like?: number) => void;
 
 export type FormatNumberProps = (n: number) => string
 
+export interface Props {
+  movie: MovieProps;
+  handleLike: handleLikeProps;
+  handleDelete: handleDeleteProps;
+}
+
+export interface CategoryFilterProps {
+  movies: MovieProps[];
+  onOptionsChange: (categories: OptionProps[]) => void;
+}
 
 export interface ListMovieProps {
   movies: MovieProps[];
   handleLike: handleLikeProps;
   handleDelete: handleDeleteProps;
+  categories: string[];
 }
 
 export interface MovieComponentProps {
@@ -33,4 +49,9 @@ export const formatNumber: FormatNumberProps = n => {
   } else {
     return n.toString();
   }
+};
+
+export const retrieveCategories = (movies: MovieProps[]) => {
+  const categoriesSet = new Set<string>(movies.map(item => item.category));
+  return Array.from(categoriesSet);
 };
